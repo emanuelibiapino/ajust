@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajuste - Fale conosco</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script src="js/code.js"></script>
+</head>
+<body id="over">
+	<div id="menu">
+		<div class="esquerdo">
+			<div id="logo"><a href="/pw1">Ajuste</a></div>
+		</div>
+		<div class="direito">
+			<nav id="menu_topo">
+				<ul>
+					<li><a href="#" onclick="comecando()">Relatar Problema!</a></li>
+					<li><a href="#" onclick="como_usar()">Ajuda</a></li>
+					<li><a href="#" onclick="sobrenos()">Sobre Nós</a></li>
+					<li><a href="#" onclick="faleConosco()">Fale Conosco</a></li>
+				</ul>
+			</nav>
+			<button onclick="menuMobile()" id="botao_menu"></button><br/><br/>
+		</div>
+	</div>
+	<div id="conteudo">
+		<nav id="menu_topo_mobile">
+		<ul>
+			<li><a href="#" onclick="comecando()">Relatar Problema!</a></li>
+			<li><a href="#" onclick="como_usar()">Ajuda</a></li>
+			<li><a href="#" onclick="sobrenos()">Sobre Nós</a></li>
+			<li><a href="#" onclick="faleConosco()">Fale Conosco</a></li>
+		</ul>
+	</nav>
+		<div id="relata_problema" class="fundo_campo centro">
+			<h1>Fale conosco</h1>
+			<form action="contato.php" method="post">
+				<input type="text" required name="email" placeholder="Insira seu email"><br>
+				<input type="text" required name="Nome" placeholder="Nome Completo"><br>
+				<input type="text" required name="Assunto" placeholder="Assunto"><br>
+				<textarea  required placeholder="Insira aqui a mensagem que deseja." name="textoContato"></textarea><br>
+				<button name="EnviaContato">Enviar</button>
+			</form>
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body{
+	height: 100%;
+	margin: 0;
+	background-color: #302f2f;
+	font-family: ubuntu;
+	overflow-x: hidden;
+}
+#menu{
+	position: fixed;
+	z-index: 19;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0,0,0,.3);
+	color: #fff;
+	padding: 5px 10px 5px 10px;
+}
+#logo{
+	position: relative;
+	z-index: 19;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 10px 20px 10px 50px;
+}
+#logo a{
+	text-decoration: none;
+	color: #FFF;
+}
+.esquerdo{
+	float: left;
+}
+.direito{
+	float: right;
+	margin-right: 100px;
+}
+#menu_topo{
+	position: relative;
+	z-index: 19;
+}
+#menu_topo ul{
+	list-style: none; 
+}
+#menu_topo ul li{
+	display: inline;
+	margin-right: 15px;
+}
+#menu_topo ul li a{
+	text-decoration: none;
+	color: #fff;
+	transition: 0.3s;
+}
+#menu_topo ul li a:hover{
+	color: #D3D3D3;
+	transition: 0.3s;
+}
+#conteudo{
+	position: absolute;
+	min-width: 100%;
+	height: 100%;
+	min-height: 613px;
+	background-color: rgb(100,149,237);
+	z-index: 9;
+	transition: 0.3s;
+}
+.fundo_campo{
+	width: 90%;
+	overflow-y: auto;
+	max-width: 90%;
+	font-size: 1.4vw;
+	height: 80%;
+	position: relative;
+	z-index: 16;
+	color: #fff;
+	background-color: rgba(0,0,0,0.3);
+	margin: 0 auto;
+	margin-top: 6%;
+	border-radius: 3px;
+}
+.fundo_campo img{
+	width: 80%;
+	height: auto;
+}
+.fundo_campo p a{
+	color: #fff;
+}
+.fundo_campo input[name=email],.fundo_campo input[name=Assunto],.fundo_campo textarea[name=textoContato],
+.fundo_campo input[name=Nome]{
+	font-family: ubuntu;
+	background: #fff;
+	width: 40%;
+	padding: 5px 10px;
+	margin-top: 10px;
+	height: 60px;
+	font-size: 25px;
+	border-radius: 3px;
+	border: 0px;
+}
+.fundo_campo textarea[name=textoContato]{
+	height: 120px;
+}
+.fundo_campo button[name=EnviaContato]{
+	width: 41.25%;
+	font-size: 25px;
+	font-family: ubuntu;
+	padding: 5px 10px;
+	margin-top: 10px;
+	height: 60px;
+	border-radius: 3px;
+	color: #fff;
+	border: 0px;
+	background:rgba(176,196,222,.8);
+	transition: 0.3s;
+}
+.fundo_campo button[name=EnviaContato]:hover{
+	background:rgba(176,196,222,.6);
+	transition: 0.3s;	
+}
+.fundo_campo img{
+	border: 3px solid #fff;
+	border-radius: 4px;
+}
+.centro{
+	text-align: center;
+}
+#titulo_cont{
+	text-align: center;
+	margin-bottom: -5%;
+	margin-top: 2%;
+}
+#relata_problema{
+	padding: 1% 2% 1% 2%;
+}
+#relata_problema input[name=cidade]{
+	width: 40%;
+	height: 40px;
+	padding: 10px 20px 10px 20px;
+	text-align: center;
+	font-size: 25px;
+	color:#000;
+	border-radius: 3px 0px 0px 3px;
+	background-color: #fff;
+	border:none;
+}
+#relata_problema button[name=nome_cidade]{
+	width: 10%;
+	height: 61px;
+	text-align: center;
+	font-size: 1.5vw;
+	background-color: #fff;
+	border-radius: 0px 3px 3px 0px;
+	background-color: rgba(176,196,222,.8);
+	color: #fff;
+	border:none;	
+	transition: 0.3s;
+	margin-left: -4px;
+}
+#relata_problema button[name=nome_cidade]:hover{
+	background-color: rgba(176,196,222,.6);
+	transition: 0.3s;
+}
+#informacoes{
+	display: none;
+}
+#relata_problema h1{
+	font-size: 70px;
+	color: #fff;
+	text-align: center;
+	margin-top: -0.3%;
+}
+.comecando_den{
+	text-align: center;
+	margin-top: 10%;
+}
+.comecando_den select[name=cidade]{
+	width: 40%;
+	height: 60px;
+	padding: 5px 3px;
+	border: 0px;
+	border-radius: 3px 0px 0px 3px;
+	font-size: 25px;
+	color: #000;
+	margin-left: 1.2%;
+	background: url(img/flecha.svg) no-repeat rgb(255,255,255);
+	background-size: 20px;
+	text-align: left;
+	background-position: 95% center;
+}
+#meio_den{
+	margin-top: 8%;
+	text-align: center;
+	display: none;
+}
+#meio_den h1{
+	margin-top: 2%;
+}
+#meio_den input[type=text], #meio_den select[name=tipoProblema]{
+	width: 30%;
+	height: 50px;
+	text-align: center;
+	font-size: 25px;
+	background-color: #fff;
+	padding: 5px;
+	background-color: rgba(255,255,255,1);
+	color: #000;
+	border:none;	
+	transition: 0.3s;
+	margin-left: 50px;
+	border-radius: 3px;
+}
+#meio_den input[name=cidade_nomeada]{
+	max-width: 200px;
+	background-color: rgb(240,240,240);
+	margin-right: -2.5%;
+	margin-left: -2.5%;
+}
+#meio_den input[name=CEP]{
+	max-width: 220px;
+	margin-right: -2.5%;
+}
+#meio_den input[name=CPF]{
+	width: 220px;
+	margin-right: -2.5%;
+	margin-left: -2.4%;
+}
+#meio_den input[name=Email]{
+	width: 20%;
+	min-width: 220px;
+	margin-right: -2%;
+}
+#meio_den select[name=tipoProblema]{
+	height: 60px;
+	margin-left: 1.2%;
+	background: url(img/flecha.svg) no-repeat rgb(255,255,255);
+	background-size: 20px;
+	text-align: left;
+	background-position: 95% center;
+}
+#meio_den textarea{
+	width: 90%;
+	background-color: rgba(255,255,255,1);
+	margin-left: 21.5%;
+	border:0px;
+	color: #000;
+	height: 140px;
+	padding: 10px;
+	font-family: ubuntu;
+	border-radius: 3px;
+}
+#meio_den button{
+	width: 67.5%;
+	height: 50px;
+	margin-top: 2%;
+	margin-left: -4%;
+	background-color: rgba(176,196,222,.8);
+	color: #fff;
+	border:0px;
+	font-size: 22px;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+#meio_den button:hover{
+	background-color: rgba(176,196,222,.6);
+	transition: 0.3s;
+}
+.form_esquerda{
+	width: 40%;
+	height: auto;
+	float: left;
+}
+.form_direita{
+	width: 60%;
+	height: auto;
+	float: right;
+	word-wrap:  normal;
+}
+#arquivo{
+	background-color: rgba(0,0,0,0.6);
+	width: 67.5%;
+	font-size: 22px;
+	border-radius: 3px 3px 0px 0px;
+	padding: 5px 0px 5px 0px;
+	color: #fff;
+	margin-left: 14%;
+	word-wrap:  normal;
+}
+.selecionarArquivo{
+	background-color: rgba(255,255,255,0.7);
+	margin-top: -3%;
+	width: 67.5%;
+	color: #000;
+	height: 45px;
+	border-radius: 0px 0px 3px 3px;
+	padding-top: 12px;
+	margin-left: 14%;
+	word-wrap: break-word;
+}
+#menu_topo_mobile, #botao_menu{
+	display: none;
+}
+#botao_menu{
+	width: 40px;
+	height: 40px;
+	margin-right: -160px;
+	position: fixed;
+	margin-top: 5px;
+	background-color: rgba(255,255,255,.8);
+	background-image: url(img/menu.svg);
+	background-size: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 0px;
+	border-radius: 3px;
+}
+#menu_topo_mobile{
+	margin-right: -90%;
+	margin-top: 10px;
+	width: 100%;
+	height: auto;
+	z-index: 20;
+	background-color: #fff;
+	position: fixed;
+}
+#menu_topo_mobile ul a{
+		text-decoration: none;
+	}
+#menu_topo_mobile ul a li{
+	list-style: none;
+	padding-top: 7.5px;
+	padding-bottom: 7.5px;
+	margin-left: -40px;
+	text-align: center;
+	transition: 0.3s;
+}
+#menu_topo_mobile ul a li:hover{
+	background-color: rgba(70,130,180,.8);
+	transition: 0.3s;
+	color: #fff;
+}
+#menu_topo_mobile ul a li{
+	color: #000;
+	text-decoration: none;
+}
+#problemas{
+	display: none;
+}
+#estatisticas{
+	text-align: center;
+	margin-bottom: 2%;
+}
+#estatisticas img{
+	width: 20%;
+}
+#estatistica h2{
+	width: auto;
+	margin: 0 auto;
+}
+#pass1{
+	display: block;
+}
