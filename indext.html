@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajuste - Inicio</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="a.css">
+	<script src="js/code.js"></script>
+</head>
+<body>
+	<div id="menu">
+		<div class="esquerdo">
+			<div id="logo"><a href="/pw1">Ajust</a></div>
+		</div>
+		<div class="direito">
+			<nav id="menu_topo">
+				<ul>
+					<li><a href="#" onclick="comecando()">Relatar Problema!</a></li>
+					<li><a href="#" onclick="como_usar()">Ajuda</a></li>
+					<li><a href="#" onclick="sobrenos()">Sobre Nós</a></li>
+					<li><a href="#" onclick="faleConosco()">Fale Conosco</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+
+	
+	<div id="conteudo">
+		<div id="relata_problema" class="fundo_campo">
+			<div id="titulo_cont">
+				<h1>Relatar Problema!</h1>
+				<p>Relate um problema em sua cidade. <br>Para realizar uma denúncia selecione um cidade e clique INICIAR logo abaixo.</p>
+			</div>
+			<div id="pass1">
+				<div class="comecando_den">
+					<select name="cidade">
+						<option selected>Selecione uma cidade</option>
+						<option>Picos</option>
+					</select>
+					<button onclick="mostrarInfo()" name="nome_cidade">Iniciar</button>
+				</div>
+			</div>
+			<!--Informações problemas-->
+			<div id="problemas">
+				<div class="comecando_den caixa-dec">
+					<button onclick="formulario_inicio()" id="botao_criarNovo">Relatar novo problema!</button>			
+					<select id="sele" onchange="mostracat()" name="cidade">
+						<option selected>Selecione uma categoria</option>
+						<option>Má iluminação!</option>
+						<option>Cano Quebrado!</option>
+					</select>
+				</div>
+				<div id="estatistica">
+					<h2 style="color:#FFF;">Estatisticas</h2>
+					<div id="estatisticas">
+						<img src="img/grafico_g.PNG" alt="Estatísticas de problemas na cidade" />
+					</div>
+				</div>
+				<div id="iluminacao">
+					<div class="caixa">
+						<div>
+							<p><strong>Localizado na:</strong></p>
+							<p class="fundo_campo_rua">Rua <i>Montes Claros</i> <strong>| CEP:</strong> 20000000</p>
+						</div>
+						<div>
+							<p><strong>Detalhes:</strong></p>
+							<p class="fundo_campo_rua">Árvore quebrou os fios do poste.</p>
+						</div>
+						<p><strong>Data:</strong> 20/11/2017</p>
+						<div>
+						<div>
+							<p><strong>Status:</strong></p>
+							<p class="fundo_campo_rua">Em andamento</p>
+						</div>
+						<span style="padding-left:68%;"><b>256 reclamações </b><button>Também tenho este problema!</button></span>
+						<span style="padding-left:85%;"><button>Excluir problema!</button></span>
+						<span style="padding-left:85%;"><button>Alterar problema!</button></span>
+						</div>
+					</div>
+				</div>
+				<div id="cano-quebrado">
+					<div class="caixa">
+						<div>
+							<p><strong>Localizado na:</strong></p>
+							<p class="fundo_campo_rua">Rua <i>Montes Claros</i> <strong>| CEP:</strong> 20000000</p>
+						</div>
+						<div>
+							<p><strong>Detalhes:</strong></p>
+							<p class="fundo_campo_rua">caminhão passou por cima.</p>
+						</div>
+						<p><strong>Data:</strong> 20/11/2017</p>
+						<div>
+						<div>
+							<p><strong>Status:</strong></p>
+							<p class="fundo_campo_rua">Pendente</p>
+						</div>
+						<span style="padding-left:68%;"><b>100 reclamações </b><button>Também tenho este problema!</button></span>
+						<span style="padding-left:85%;"><button>Excluir problema!</button></span>
+						<span style="padding-left:85%;"><button>Alterar problema!</button></span>
+						</div>
+					</div>
+
+					<div class="caixa">
+						<div>
+							<p><strong>Localizado na:</strong></p>
+							<p class="fundo_campo_rua">Rua <i>João Segundo</i> | <strong>CEP:</strong> 64970000</p>
+						</div>
+						<div>
+							<p><strong>Detalhes:</strong></p>
+							<p class="fundo_campo_rua">Chuva muito forte arrancou todos os canos que liga a comunidade.</p>
+						</div>
+						<p><strong>Data:</strong> 12/11/2017</p>
+						<div>
+						<div>
+							<p><strong>Status:</strong></p>
+							<p class="fundo_campo_rua">Pendente</p>
+						</div>
+						<span style="padding-left:68%;"><b>25 reclamações </b><button>Também tenho este problema!</button></span>
+						<span style="padding-left:85%;"><button>Excluir problema!</button></span>
+						<span style="padding-left:85%;"><button>Alterar problema!</button></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!---Inicio da segunda parte do formulário-->
+			<div id="meio_den">
+				<form method="POST" action="criarProblema.php" enctype="multipart/form-data" name="upload">
+					<input type="text" name="cidade" readonly disabled>
+					<input type="text" name="Email" required placeholder="Email" autocomplete="off" >
+					<input type="text" name="cep" required placeholder="CEP" autocomplete="off" maxlength="9" 
+					onblur="cepInvalido(this.value)">
+					<input type="text" name="Nome_completo" required placeholder="Nome Completo" autocomplete="off" maxlength="50"><br><br>
+					<input type="text" name="CPF" required maxlength="11" placeholder="CPF" autocomplete="off" 
+					onblur="TestaCPF(this.value)" >
+					<input type="text" id="nome_rua" name="nomeRua" required placeholder="Nome da rua" autocomplete="off">
+					
+					<select name="tipo">
+						<option selected value="">Tipo do Problema</option>
+						<option value="1">Buraco na rua</option>
+						<option value="2">Má iluminação</option>
+						<option value="3">Cano quebrado</option>
+						<option value="4">Saneamento Básico</option>
+						<option value="5">Outros</option>
+					</select><br><br>
+					<div class="form_esquerda">
+							<textarea placeholder="Insira uma breve descrição do problema." required name="descricao"></textarea>
+						</div>
+					<div class="ladoAlado">
+						<div class="form_direita">
+							<div id="arquivo">Por favor, insira uma imagem do problema enfrentando!</div><br>
+							<div class="selecionarArquivo"><input type='file' required name='imagem'><br></div>
+							<button type="submit" onclick="envia()" name="upload">Informar o problema</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajuste - Inicio</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="a.css">
+	
+</head>
+<body>
+	<div id="menu">
+		<div class="esquerdo">
+			<div id="logo"><a href="/pw1/ajust.html">Ajust</a></div>
+		</div>
+		<div class="direito">
+			<nav id="menu_topo">
+				<ul>
+					<li><a href="#" onclick="comecando()">Relatar Problema!</a></li>
+					<li><a href="#" onclick="como_usar()">Ajuda</a></li>
+					<li><a href="#" onclick="sobrenos()">Sobre Nós</a></li>
+					<li><a href="#" onclick="faleConosco()">Fale Conosco</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+
+	
+	<div id="conteudo">
+		<div id="relata_problema" class="fundo_campo">
+			<div id="titulo_cont">
+				<h1>Relatar Problema!</h1>
+				<p>Relate um problema em sua cidade. <br>Para realizar denúncia de problemas da cidade PICOS realize o Login logo abaixo.</p>
+			</div>
+			
+			<div id="login_div">
+				<h3>Login</h3>
+				<input type="email" placeholder="Email..." id="email_field"/>
+				<input type="password" placeholder="Senha..." id="senha_field"/>
+		
+				<button onclick="login()">Logar</button>
+			</div>
+	
+			<div id="user_div">
+				<h3>Bem vindo</h3>
+				<p id="usuario_p">Logado com sucesso</p>
+				<button onclick="logout()">Sair da sessão</button>
+			</div>
+			
+			<div id="formulario">
+		
+				<form id="formulario">
+					<input type="text" id="cep" name="cep" required placeholder="CEP" autocomplete="off" maxlength="9">
+					<input type="text" id="nomeRua" name="nomeRua" required placeholder="Nome da rua" autocomplete="off">
+					
+					<select id="tipo" name="tipo">
+						<option selected value="">Tipo do Problema</option>
+						<option value="1">Buraco na rua</option>
+						<option value="2">Má iluminação</option>
+						<option value="3">Cano quebrado</option>
+						<option value="4">Saneamento Básico</option>
+						<option value="5">Outros</option>
+					</select><br><br>
+					<div class="form_esquerda">
+						<textarea id="descricao" placeholder="Insira uma breve descrição do problema." required name="descricao"></textarea>
+					</div>
+					<div class="ladoAlado">
+						<div class="form_direita">
+							<div id="arquivo">Por favor, insira uma imagem do problema enfrentando!</div><br>
+							<div class="selecionarArquivo"><input type='file' required name='imagemProblema'><br></div>
+							<button id="submit" type="submit" name="submit">Informar o problema</button>
+						</div>
+					</div>
+				</form>
+		
+			</div>
+			<div>
+			<hr>
+				<ul id="probList"></ul>
+				<hr>
+			</div>
+			
+		</div>
+	</div>
+	
+	<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
