@@ -26,6 +26,11 @@ body{
 	text-decoration: none;
 	color: #FFF;
 }
+.login_div{
+	text-align: center;
+	margin-bottom: -4%;
+	margin-top: 7%;
+}
 .esquerdo{
 	float: left;
 }
@@ -185,15 +190,15 @@ body{
 	text-align: left;
 	background-position: 95% center;
 }
-#meio_den{
+#formulario{
 	margin-top: 8%;
 	text-align: center;
-	display: none;
+	display: block;
 }
-#meio_den h1{
+#formulario h1{
 	margin-top: 2%;
 }
-#meio_den input[type=text], #meio_den select[name=tipoProblema]{
+#formulario input[type=text], #formulario select[name=tipoProblema]{
 	width: 30%;
 	height: 50px;
 	text-align: center;
@@ -207,27 +212,27 @@ body{
 	margin-left: 50px;
 	border-radius: 3px;
 }
-#meio_den input[name=cidade_nomeada]{
+#formulario input[name=cidade_nomeada]{
 	max-width: 200px;
 	background-color: rgb(240,240,240);
 	margin-right: -2.5%;
 	margin-left: -2.5%;
 }
-#meio_den input[name=CEP]{
+#formulario input[name=cep]{
 	max-width: 220px;
 	margin-right: -2.5%;
 }
-#meio_den input[name=CPF]{
+#formulario input[name=CPF]{
 	width: 220px;
 	margin-right: -2.5%;
 	margin-left: -2.4%;
 }
-#meio_den input[name=Email]{
+#formulario input[name=Email]{
 	width: 20%;
 	min-width: 220px;
 	margin-right: -2%;
 }
-#meio_den select[name=tipoProblema]{
+#formulario select[name=tipoProblema]{
 	height: 60px;
 	margin-left: 1.2%;
 	background: url(img/flecha.svg) no-repeat rgb(255,255,255);
@@ -235,7 +240,7 @@ body{
 	text-align: left;
 	background-position: 95% center;
 }
-#meio_den textarea{
+#formulario textarea{
 	width: 90%;
 	background-color: rgba(255,255,255,1);
 	margin-left: 21.5%;
@@ -246,7 +251,7 @@ body{
 	font-family: ubuntu;
 	border-radius: 3px;
 }
-#meio_den button{
+#formulario button{
 	width: 67.5%;
 	height: 50px;
 	margin-top: 2%;
@@ -258,7 +263,7 @@ body{
 	border-radius: 3px;
 	transition: 0.3s;
 }
-#meio_den button:hover{
+#formulario button:hover{
 	background-color: rgba(176,196,222,.6);
 	transition: 0.3s;
 }
