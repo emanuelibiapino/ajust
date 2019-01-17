@@ -42,8 +42,11 @@ firebase.database().ref('problemas').on('value', function (snapshot) {
 		but1.setAttribute('onclick',"tambem(this)");
 		but2.setAttribute('onclick','alterar(this)');
 		but3.setAttribute('onclick','excluir(this)');
+		but1.setAttribute('style','width: 15%;margin: 0 auto;padding: 5px 5px;text-align: center;margin-bottom: 25px;margin-left: 1%;background-color: rgba(0,196,0,.8);color: #fff;border:0px;font-size: 18px;border-radius: 4px;transition: 0.2s;');
 		but1.appendChild(document.createTextNode("tenho este problema"));
+		but2.setAttribute('style','width: 8%;margin: 0 auto;padding: 5px 5px;text-align: center;margin-bottom: 25px;margin-left: 1%;background-color: rgba(0,196,196,.8);color: #fff;border:0px;font-size: 18px;border-radius: 4px;transition: 0.2s;');
 		but2.appendChild(document.createTextNode("alterar"));
+		but3.setAttribute('style','width: 8%;margin: 0 auto;padding: 5px 5px;text-align: center;margin-bottom: 25px;margin-left: 1%;background-color: rgba(196,0,0,.8);color: #fff;border:0px;font-size: 18px;border-radius: 4px;transition: 0.2s;');
 		but3.appendChild(document.createTextNode("Excluir"));
 		p.appendChild(document.createTextNode('Localizado na:'));
 		a.appendChild(document.createTextNode('Rua: '+childData.nomeRua));
