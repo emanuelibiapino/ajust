@@ -12,7 +12,7 @@
 		margin-top: 7%;
 		}
 		#formulario{
-		margin-top: 8%;
+		margin-top: 3%;
 		text-align: center;
 		display: block;
 		}
@@ -78,26 +78,6 @@
 		border-radius: 3px;
 		transition: 0.3s;
 		}
-
-		#botoes{
-		width: 10%;
-		font-size: 25px;
-		color: #fff;
-		margin: 0 auto;
-		padding: 5px 5px;
-		text-align: center;
-		background-color: rgba(176,196,222,.8);
-		border-radius: 4px;
-		transition: 0.2s;
-		margin-bottom: 25px;
-		border: 0px;
-		margin-left: 1%;
-	}
-	#botoes:hover{
-		background-color: rgba(176,196,222,.6);
-		transition: 0.2s;
-	}
-
 		#relatados button{
 		width: 99.5%;
 		height: 50px;
@@ -117,7 +97,7 @@
 		margin-top: -5%;
 		margin-bottom: 1%;
 		margin-left: 95%;
-		background-color: rgba(176,196,222,.8);
+		background-color: rgba(255,0,0,.8);
 		color: #fff;
 		border:0px;
 		font-size: 14px;
@@ -173,10 +153,9 @@
 		<div class="direito">
 			<nav id="menu_topo">
 				<ul>
-					<li><a href="#" onclick="comecando()">Relatar Problema!</a></li>
-					<li><a href="#" onclick="como_usar()">Ajuda</a></li>
-					<li><a href="#" onclick="sobrenos()">Sobre Nós</a></li>
-					<li><a href="#" onclick="faleConosco()">Fale Conosco</a></li>
+					<li><a href="/pw1/ajust.html">Relatar Problema!</a></li>
+					<li><a href="/pw1/como_usar.html" >Ajuda</a></li>
+					<li><a href="/pw1/sobrenos.html" >Sobre Nós</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -196,7 +175,7 @@
 				<input type="email" placeholder="Email..." id="email_field"/><br>
 				<input type="password" placeholder="Senha..." id="senha_field"/><br>
 		
-				<button onclick="login()" id="botoes">Entrar</button>
+				<button onclick="login()">Entrar</button>
 			</div>
 	
 			<div id="user_div">
@@ -207,7 +186,7 @@
 			<div id="formulario">
 		
 				<form id="formulario">
-					<h1>informar novo problema!</h1>
+					<h1>Informar novo problema!</h1>
 					<input type="text" id="cep" name="cep" required placeholder="CEP" autocomplete="off" maxlength="9">
 					<input type="text" id="nomeRua" name="nomeRua" required placeholder="Nome da rua" autocomplete="off">
 					
@@ -235,7 +214,7 @@
 			
 			<div id="relatados">
 				<h1>Problemas Relatados</h1>
-				<button>Informar novo problema</button>
+				<button onclick="formu()">Informar novo problema</button>
 			</div>
 			<div id="cai"></div>
 			

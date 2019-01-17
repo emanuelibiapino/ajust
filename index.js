@@ -62,9 +62,14 @@ function submitForm(e){
 	var email = ema.email;
 	var stat = 0;
 	var data = new Date();
-	window.alert(data);
+	//window.alert(data);
 	//Salvar no firebase
 	saveProblema(cep, nomeRua, tipo, descricao,email,data,stat);
+	
+	document.getElementById("formulario").style.display = "none";
+	document.getElementById("titulo_cont").style.display = "none";
+	document.getElementById("relatados").style.display = "block";
+	document.getElementById("cai").style.display = "block";
 }
 
 //função para receber valores do formulario
@@ -101,7 +106,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 	
 	if(user != null){
 		var email_id = user.email;
-		document.getElementById("usuario_p").innerHTML = "Bem vindo: " + email_id;
+		document.getElementById("usuario_p").innerHTML = "Usuário: " + email_id;
 		document.getElementById("formulario").style.display = "none";
 		document.getElementById("titulo_cont").style.display = "none";
 		document.getElementById("relatados").style.display = "block";
@@ -131,7 +136,7 @@ function login(){
 	  
 	  window.alert("Error : " + errorMessage);
 	  // ...
-	 
+	 document.getElementById("cai").style.display = "block";
 	});
 	
 	
@@ -140,4 +145,14 @@ function login(){
 
 function logout(){
 	firebase.auth().signOut();
+	document.getElementById("cai").style.display = "none";
 }
+
+function formu(){
+	document.getElementById("user_div").style.display = "block";
+	//document.getElementById("login_div").style.display = "block";
+	document.getElementById("relatados").style.display = "none";
+	document.getElementById("formulario").style.display = "block";
+	document.getElementById("cai").style.display = "none";
+}
+
