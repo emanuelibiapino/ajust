@@ -27,6 +27,8 @@ firebase.database().ref('problemas').on('value', function (snapshot) {
 				var p = document.createElement('p');
 		var q = document.createElement('p');
 		var r = document.createElement('p');
+		var a = document.createElement('p');
+		var y = document.createElement('p');
 		var dat = document.createElement('p');
 		var ta = document.createElement('p');
 		var d = document.createElement('div');
@@ -44,12 +46,16 @@ firebase.database().ref('problemas').on('value', function (snapshot) {
 		but2.appendChild(document.createTextNode("alterar"));
 		but3.appendChild(document.createTextNode("Excluir"));
 		p.appendChild(document.createTextNode('Localizado na:'));
-		q.appendChild(document.createTextNode('Rua: '+childData.nomeRua+'| CEP: '+childData.cep ));
-		r.appendChild(document.createTextNode('Tipo: '+childData.tipo+'| Descrição: '+childData.descricao ));
+		a.appendChild(document.createTextNode('Rua: '+childData.nomeRua));
+		q.appendChild(document.createTextNode('CEP: '+childData.cep ));
+		y.appendChild(document.createTextNode('Tipo: '+childData.tipo));
+		r.appendChild(document.createTextNode('Descrição: '+childData.descricao ));
 		dat.appendChild(document.createTextNode('Data: '+childData.data));
 		ta.appendChild(document.createTextNode('Votos: '+childData.tambem));
 		d.appendChild(p);
+		d.appendChild(a);
 		d.appendChild(q);
+		d.appendChild(y);
 		d.appendChild(r);
 		d.appendChild(dat);
 		d.appendChild(ta);
@@ -128,12 +134,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 		document.getElementById("formulario").style.display = "none";
 		document.getElementById("titulo_cont").style.display = "none";
 		document.getElementById("relatados").style.display = "block";
+		document.getElementById("cadastro_div").style.display = "none";
 		
 	}
 	
   } else {
     // No user is signed in.
-	
+	document.getElementById("cadastro_div").style.display = "none";
 	document.getElementById("user_div").style.display = "none";
 	document.getElementById("login_div").style.display = "block";
 	document.getElementById("relatados").style.display = "none";
@@ -159,6 +166,25 @@ function login(){
 	
 	
 	
+}
+
+function mostraCadastro(){
+	document.getElementById("login_div").style.display = "none";
+	document.getElementById("titulo_cont").style.display = "none";
+	document.getElementById("cadastro_div").style.display = "block";
+}
+
+function cadastro(){
+	
+	var userEmail = document.getElementById("email_fieldC").value;
+	var userSenha = document.getElementById("senha_fieldC").value;
+	firebase.auth().createUserWithEmailAndPassword(userEmail, userSenha).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  window.alert("Error : " + errorMessage);
+  // ...
+});
 }
 
 function logout(){
